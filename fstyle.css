@@ -1,0 +1,360 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Overpass", recursive;
+}
+
+body{
+  background: #F3F8FA  
+
+;
+}
+
+.wrapper .header{
+  z-index: 1;
+  background: #053042   ;
+  position: fixed;
+  width: calc(100% - 0%);
+  height: 70px;
+  display: flex;
+  top: 0;
+}
+
+.wrapper .header .header-menu{
+  width: calc(100% - 0%);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.wrapper .header .header-menu .title{
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.wrapper .header .header-menu .title span{
+  color: #4CCEE8;
+}
+
+.wrapper .header .header-menu .sidebar-btn{
+  color: #fff;
+  position: absolute;
+  margin-left: 240px;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+
+
+.wrapper .sidebar{
+  z-index: 1;
+  background: #294B59 ;
+  position: fixed;
+  top: 70px;
+  width: 250px;
+  height: calc(100% - 9%);
+  transition: 0.3s;
+  transition-property: width;
+  overflow-y: auto;
+}
+
+.wrapper .sidebar .sidebar-menu{
+  overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .profile img{
+  margin: 20px 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.wrapper .sidebar .sidebar-menu .profile p{
+  color: #bbb;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item{
+  width: 250px;
+  overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn{
+  display: block;
+  color: #fff;
+  position: relative;
+  padding: 25px 20px;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+  color: #4CCEE8;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn i{
+  margin-right: 20px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+  float: right;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu{
+  background: #3498DB;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.3s;
+  transition-property: background, max-height;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a{
+  display: block;
+  position: relative;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+  background: #55B1F0;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:not(last-child){
+  border-bottom: 1px solid #8FC5E9;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu i{
+  padding-right: 20px;
+  font-size: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+  max-height: 500px;
+}
+
+.wrapper .main-container{
+  width: (100% - 250px);
+  margin-top: 70px;
+  margin-left: 250px;
+  padding: 15px;
+  background: url(background.jpg)no-repeat;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+.wrapper.collapse .sidebar{
+  width: 70px;
+}
+
+.wrapper.collapse .sidebar .profile img,
+.wrapper.collapse .sidebar .profile p,
+.wrapper.collapse .sidebar a span{
+  display: none;
+}
+
+.wrapper.collapse .sidebar .sidebar-menu .item .menu-btn{
+  font-size: 23px;
+}
+
+.wrapper.collapse .sidebar .sidebar-menu .item .sub-menu i{
+  font-size: 18px;
+  padding-left: 3px;
+}
+
+.wrapper.collapse .main-container{
+  width: calc(100% - 70px);
+  margin-left: 70px;
+}
+
+.wrapper .main-container .card{
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+        
+
+.wid{
+
+  padding: 15px;
+   margin: 15px auto;
+}
+
+
+.color1{
+    background: #D4E6F1  ;
+}
+.color2{
+    background: #D4E6F1 ;
+}
+.color3{
+    background: #D4E6F1 ;
+}
+.card-body{
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 110px;
+    color: #000709 ;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.card-body h3{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.currency, .count{
+    font-size: 30px;
+    font-weight: 500;
+}
+.card-body p{
+    font-size: 16px;
+    margin-top: 0;
+}
+.card-body i{
+    font-size: 95px;
+    opacity: 0.5;
+}                              
+
+.graph {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.graphSectionLabels {
+    text-align: center;
+}
+
+.mainDiv {
+  background-color: lavender;
+}
+ 
+
+ .linebutton {
+  padding: 20px;
+ width: 990px;
+
+  border: 5px solid #bdc3c7;
+  font-family: 'Source Sans Pro', sans-serif;
+  
+  margin: 40px auto;
+ 
+}
+
+.post {
+  margin-bottom: 20px;
+}
+
+.column1{
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row1{margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row2{
+
+margin: 0 -5px;
+padding-top: 30px;
+
+
+}
+
+
+.date {
+  color: #3498db;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.quote{
+  border-left: 2px solid #bdc3c7;
+  padding-left: 90px;
+}
+
+h2 {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);

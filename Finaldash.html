@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Dashboard</title>
+
+	<html lang="en" dir="ltr">
+
+     <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="fstyle.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+
+        
+       
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="data.js" ></script>
+
+
+</head>
+
+    
+
+<body>
+
+<div class="wrapper">
+             
+            <div class="header">
+                <div class="header-menu">
+                    <div class="title">Cosmetics</div>
+
+                    <div class="sidebar-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                     
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-menu">
+                    <center class="profile">
+                        <img src="c1.jpg" alt="">
+                        <p>COSMETICS</p>
+                    </center>
+                    <li class="item">
+                        <a href="#" class="menu-btn">
+                            <i class="fas fa-desktop"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="item" id="contents">
+                        <a href="#contents" class="menu-btn">
+                            <i class="fas fa-chart-area"></i><span>Contents <i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <a href="#"><i class="fas fa-square"></i>Current Snapshot </a>
+                            <a href="#"><i class="fab fa-mix"></i>Mix Of Business</a>
+                            <a href="#"><i class="fas fa-network-wired"></i>Franchise Sale </a>
+                            <a href="#"><i class="far fa-dot-circle"></i>Top SKUs </a>
+                            <a href="#"><i class="fas fa-chart-area"></i>Sales Comparison</a>
+                        </div>
+                    </li>
+                    <li class="item" id="worldwide">
+                        <a href="#worldwide" class="menu-btn">
+                            <i class="fas fa-globe-asia"></i> Worldwide sale  <i class="fas fa-chevron-down drop-down"></i>
+                        </a>
+                        <div class="sub-menu">
+                            <a href="#"><i class="fas fa-globe-asia"></i>Asia</a>
+                            <a href="#"><i class="fas fa-globe-europe"></i>europe</a>
+                            <a href="#"><i class="fas fa-globe-americas"></i></i> america</a>
+                        </div>
+                    </li>
+                    <li class="item" id="repair">
+                        <a href="#repair" class="menu-btn">
+                            <i class="fas fa-cog"></i><span>Repair Requests <i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <a href="#"><i class="fas fa-lock"></i><span>Password</span></a>
+                            <a href="#"><i class="fas fa-language"></i><span>Language</span></a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="menu-btn">
+                            <i class="fas fa-info-circle"></i><span>Business Partners </span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+
+ 
+            <div class="main-container">
+
+            
+
+            <div class="wid">
+                
+
+            
+
+
+            <div class="card-body color1">
+            <div class="float-left">
+                <h3>
+                    <span class="currency">$</span>
+                    <span class="count">20000</span>
+                </h3>
+                <p>No. of products sold this month</p>
+            </div>
+
+            
+           
+        </div>
+        <!--Widget End-->
+        <!--Widget Start-->
+        <div class="card-body color2">
+            <div class="float-left">
+                <h3>
+                    <span class="count">4365</span>
+                </h3>
+                <p>Total sale this month</p>
+            </div>
+           
+        </div>
+        <!--Widget End-->
+        <!--Widget Start-->
+        <div class="card-body color3">
+            <div class="float-left">
+                <h3>
+                    <span class="count">345</span>
+                </h3>
+                <p>Total no. of outlets till this month</p>
+            </div>
+
+        </div>
+        <!--Widget End-->
+
+        <div class="card-body color2">
+            <div class="float-left">
+                <h3>
+                    <span class="count">78%</span>
+                </h3>
+                <p>% target achieved this month</p>
+            </div>
+            
+        </div>
+
+        <script type="text/javascript">
+        $('.count').each(function(){
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration:4000,
+                easing:'swing',
+                step: function(now){
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+        </script>
+        
+
+</div>
+
+
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $(".sidebar-btn").click(function(){
+                $(".wrapper").toggleClass("collapse");
+            });
+        });
+        </script>
+
+<div class="graph">
+
+
+<div id="mainScreen" class="mainDiv">
+        <h1 class="graphSectionLabels">Sales View</h1>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+              <h3>Mix Of Business</h3>
+              <div id="chart1"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+              <h3>Franchise Sales</h3>
+              <div id="chart2"></div>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h3>Top 5 SKUs</h3>
+                <div id="chart3"></div>
+            </div>
+          </div>
+      </div>
+
+      <h1 class="graphSectionLabels">Sales Comparison</h1>
+      <div class="card" id="chart4"></div>
+    </div>
+</div>
+
+
+ <div class="linebutton">
+                    
+
+
+                 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+
+       <div class="row1">
+        <div class="column1">
+     
+             <p>
+     Store Strength (across country)</p>
+         </div>
+   
+
+     <div class="column">
+     
+             <p class="quote">
+     Store Managers </p>
+         </div> 
+
+         <div class="column">
+     
+             <p class="quote">
+     Brands</p>
+         </div>
+    
+      </div>
+
+<div class="row2">
+        <div class="column1">
+     
+             <p>
+     Sales Growth(world wide) </p>
+         </div>
+   
+
+     <div class="column">
+     
+             <p class="quote">
+    Frenchise</p>
+         </div> 
+
+         <div class="column">
+     
+             <p class="quote">
+     Guide </p>
+         </div>
+    
+      </div>
+
+</div>
+
+
+
+</body>
+
+
+      <script>
+    // Visualization API with the 'corechart' package.
+    google.charts.load('visualization', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawBarChart);
+    google.charts.setOnLoadCallback(drawPieChart);
+    google.charts.setOnLoadCallback(drawFranchiseGraph);
+    google.charts.setOnLoadCallback(drawTopSku);
+
+    function drawBarChart() {
+                var data = JSON.parse(DATA);
+                // console.log(data)
+                var arrSales = [['Month', 'Sales Figure Current Year', 'Sales Figure Last Year']];    // Define an array and assign columns for the chart.
+
+                data.forEach(populateArray);
+
+                function populateArray(item){
+                    arrSales.push([item.Month, item.Sales_Figure_Current_Year, item.Sales_Figure_Last_Year]);
+                }
+
+                // console.log(arrSales);
+                // Set chart Options.
+                var options = {
+                    title: 'Sales Comparison LastYear VS CurrentYear (Data In BillionUSD)',
+                    curveType: 'function',
+                    height: 400,
+                    animation: {
+                        startup: true,
+                        duration: 1000,
+                        easing: 'out'
+                    },
+                    legend: { position: 'bottom', textStyle: { color: '#555', fontSize: 14} }  // You can position the legend on 'top' or at the 'bottom'.
+                };
+
+                // Create DataTable and add the array to it.
+                var figures = google.visualization.arrayToDataTable(arrSales)
+
+                // Define the chart type (LineChart) and the container (a DIV in our case).
+                var chart = new google.visualization.ColumnChart(document.getElementById('chart4'));
+                chart.draw(figures, options);      // Draw the chart with Options.
+            }
+
+            function drawPieChart() {
+                var data = JSON.parse(PIE);
+                console.log(data)
+                var arrSales = [['MOB Item', 'Sale This Month']];    // Define an array and assign columns for the chart.
+
+                data.forEach(populateArray);
+
+                function populateArray(item){
+                    arrSales.push([item.MOBItem, item.SaleThisMonth ]);
+                }
+
+                console.log(arrSales);
+                // Set chart Options.
+                var options = {
+                    // colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+                    title: 'Mix Of Business',
+                    height: 300,
+                    animation: {
+                        startup: true,
+                        duration: 1000,
+                        easing: 'out'
+                    },
+                    // curveType: 'function',
+                    legend: { position: 'bottom', textStyle: { color: '#555', fontSize: 14} }  // You can position the legend on 'top' or at the 'bottom'.
+                };
+
+                // Create DataTable and add the array to it.
+                var figures = google.visualization.arrayToDataTable(arrSales)
+
+                // Define the chart type (LineChart) and the container (a DIV in our case).
+                var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+                chart.draw(figures, options);      // Draw the chart with Options.
+            }
+
+            function drawFranchiseGraph() {
+                var data = JSON.parse(FRANCHISE_DATA);
+                // console.log(data)
+                var arrSales = [['Franchise Name', 'Sale FYTD']];    // Define an array and assign columns for the chart.
+
+                data.forEach(populateArray);
+
+                function populateArray(item){
+                    arrSales.push([item.FRANCHISE_NAME, item.SaleThisMonth ]);
+                }
+
+                // console.log(arrSales);
+                // Set chart Options.
+                var options = {
+                    title: 'Franchise Sales',
+                    height: 300,
+                    bar: {groupWidth: "95%"},
+                    legend: { position: "none" },
+                    animation: {
+                        startup: true,
+                        duration: 1000,
+                        easing: 'out',
+                    },
+                    legend: { position: 'bottom', textStyle: { color: '#555', fontSize: 14} }  // You can position the legend on 'top' or at the 'bottom'.
+                };
+
+                // Create DataTable and add the array to it.
+                var figures = google.visualization.arrayToDataTable(arrSales)
+
+                // Define the chart type (LineChart) and the container (a DIV in our case).
+                var chart = new google.visualization.ColumnChart(document.getElementById('chart2'));
+                chart.draw(figures, options);      // Draw the chart with Options.
+            }
+
+            function drawTopSku() {
+                var data = JSON.parse(TOP_SKU);
+                // console.log(data)
+                var arrSales = [['SKU Name', 'Items Sold FYTD']];    // Define an array and assign columns for the chart.
+
+                data.forEach(populateArray);
+
+                function populateArray(item){
+                    arrSales.push([item.SKU_NAME, item.SaleThisMonth]);
+                }
+
+                // console.log(arrSales);
+                // Set chart Options.
+                var options = {
+                    title: 'TOP SKUs',
+                    height: 300,
+                    bar: {groupWidth: "95%"},
+                    legend: { position: "none" },
+                    animation: {
+                        startup: true,
+                        duration: 1000,
+                        easing: 'out',
+                    },
+                    colors:['#294B59'],
+                    legend: { position: 'bottom', textStyle: { color: '#555', fontSize: 14} }  // You can position the legend on 'top' or at the 'bottom'.
+                };
+
+                // Create DataTable and add the array to it.
+                var figures = google.visualization.arrayToDataTable(arrSales)
+
+                // Define the chart type (LineChart) and the container (a DIV in our case).
+                var chart = new google.visualization.BarChart(document.getElementById('chart3'));
+                chart.draw(figures, options);      // Draw the chart with Options.
+            }
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>
